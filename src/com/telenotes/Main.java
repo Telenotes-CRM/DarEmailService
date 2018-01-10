@@ -11,9 +11,6 @@ public class Main {
         System.out.print("Hello!");
         int count = 0;
 
-        // Continue process
-        while (count < 10) {
-
 
 //        FileWriter fWriter = null;
 //        BufferedWriter writer = null;
@@ -31,15 +28,13 @@ public class Main {
             // get data
             try {
                 DarDao darDao = DarDao.getInstance();
+                darDao.getDars();
             } catch (Exception e) {
                 System.out.println("Couldn't connect to the db. Try again");
+                e.printStackTrace();
             }
 
             System.out.println("done");
-
-            Thread.sleep(10000);
-            count++;
-        }
     }
 
 
